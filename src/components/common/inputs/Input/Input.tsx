@@ -1,11 +1,7 @@
-import styles from './Input.module.scss';
+import styles from "./Input.module.scss";
 
 const Input = () => {
-    return (
-        <input className={styles.wrapper}>
-            Інпут
-        </input>
-    );
+  return <input className={styles.wrapper}>Інпут</input>;
 };
 
-export {Input};
+export { Input };
