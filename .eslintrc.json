@@ -10,7 +10,6 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "standard-with-typescript",
     "plugin:prettier/recommended",
     "prettier",
     "prettier/react"
