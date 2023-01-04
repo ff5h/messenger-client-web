@@ -1,7 +1,8 @@
+import React from "react";
 import styles from "./Input.module.scss";
 
 const Input = () => {
-  return <input className={styles.wrapper}>Інпут</input>;
+  return <input type="text" className={styles.input} />;
 };
 
 export { Input };
