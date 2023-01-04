@@ -1,18 +1,27 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
   "extends": [
+    // "plugin:@typescript-eslint/recommended",
+    // "plugin:react-hooks/recommended",
+    // "plugin:react/recommended",
+    // "plugin:import/errors",
+    // "plugin:import/warnings",
+    // "plugin:import/typescript",
+    // "plugin:prettier/recommended",
+    // "prettier",
+    // "prettier/react"
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "plugin:react/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "plugin:prettier/recommended",
-    "prettier",
-    "prettier/react"
+    "standard-with-typescript",
+    "plugin:prettier/recommended"
   ],
   "overrides": [],
   "parserOptions": {
@@ -21,8 +30,15 @@
   },
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
+    // "require-jsdoc": "off",
+    // "@typescript-eslint/ban-ts-comment": "off",
+    // "@typescript-eslint/ban-types": "off",
+    // "no-console": 0
     "require-jsdoc": "off",
+    "prettier/prettier": "error",
     "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/ban-types": "off"
+    "@typescript-eslint/ban-types": "off",
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off"
   }
 }
