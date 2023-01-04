@@ -1,4 +1,6 @@
+
 .input {
+  font-family: 'Roboto', sans-serif;
   display: block;
   width: 270px;
   height: 33px;
@@ -10,4 +12,21 @@
   border-radius: 5px;
   border: 0px;
   outline: 0px;
+  margin-top: 8px;
+}
+.input__label{
+  font-family: 'Roboto', sans-serif;
+  color: #9898B0;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 9px;
+}
+.validation{
+  font-family: 'Roboto', sans-serif;
+  color: #F44D4D;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 8px;
+  padding-top: 7px;
+  display: none;
 }
