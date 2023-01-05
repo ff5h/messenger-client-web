@@ -1,18 +1,18 @@
 .button {
-  background-color: #3369F3; 
+  display: inline-block;
+  background-color: $blue;
+  color: $white;
   border: none;
-  color: #E2E2E4;
+  border-radius: 8px;
   width: 280px;
   height: 37px;
   text-align: center;
-  display: inline-block;
-  border-radius: 8px;
   font-size: 13px;
   font-weight: 500;
   line-height: 13px;
-}
-.button:hover{
-  transition: 0.3s;
-  background-color: #0a339a;
-  color: #ffffff;
+
+  &:hover {
+    transition: 0.3s;
+    background-color: #113fb3;
+  }
 }

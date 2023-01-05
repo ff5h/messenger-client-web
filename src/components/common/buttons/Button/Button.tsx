@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Button.module.scss";
 
-const Button = () => {
-	return <button className={styles.button}>Sign in</button>;
-};
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
-export { Button };
+export const Button: React.FC<ButtonProps> = ({ children }) => {
+  return <button className={styles.button}>{children}</button>;
+};

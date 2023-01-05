@@ -1,16 +1,20 @@
 import React from "react";
 import styles from "./Input.module.scss";
 
-const Input = () => {
+interface InputProps extends React.HTMLProps<HTMLInputElement> {
+  label: string;
+  isError?: boolean;
+  helperText?: string;
+}
+
+export const Input: React.FC<InputProps> = ({ label, isError = false, helperText, ...props }) => {
+  const className = isError ? styles.error : "";
+
   return (
-    <div className={styles.input__block}>
-      <label className={styles.input__label} htmlFor="login">
-        Login
-      </label>
-      <input type="text" id="login" className={styles.input} />
-      <div className={styles.validation}>Incorrect password</div>
-    </div>
+    <>
+      <div className={styles.label}>{label}</div>
+      <input className={(styles.input, className)} {...props} />
+      {isError && helperText && <div className={styles.helperText}>{helperText}</div>}
+    </>
   );
 };
-
-export { Input };
