@@ -4,6 +4,7 @@ import styles from "./LoginPage.module.scss";
 
 export const LoginPage = () => {
   const [formValues, setFormValues] = React.useState({ login: "", password: "" });
+  const [inputType] = React.useState("password");
   return (
     <div className={styles.page}>
       <div className={styles.form}>
@@ -19,6 +20,7 @@ export const LoginPage = () => {
           <Input
             value={formValues.password}
             label="Password"
+            type={inputType}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
               setFormValues({ ...formValues, password: event.target.value })
             }

@@ -6,8 +6,8 @@ import { RegistrationPage } from "./pages/RegistrationPage";
 function App() {
   return (
     <div className="App">
-      {/* <LoginPage/> */}
-      <RegistrationPage />
+      <LoginPage/>
+      {/* <RegistrationPage /> */}
       {/* <Button>test</Button> */}
     </div>
   );
