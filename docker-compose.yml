@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  react-dev:
+    container_name: react-dev
+    image: react-dev
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    build:
+      context: .
+      target: development
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
