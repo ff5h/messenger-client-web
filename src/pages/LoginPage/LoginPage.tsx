@@ -2,8 +2,9 @@ import React from "react";
 import { Button, Input } from "../../components";
 import styles from "./LoginPage.module.scss";
 
-export const LoginPage = () => {
+const LoginPage = () => {
   const [formValues, setFormValues] = React.useState({ login: "", password: "" });
+
   return (
     <div className={styles.page}>
       <div className={styles.form}>
@@ -32,3 +33,5 @@ export const LoginPage = () => {
     </div>
   );
 };
+
+export { LoginPage };

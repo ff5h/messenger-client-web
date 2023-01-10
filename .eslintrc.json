@@ -35,7 +35,12 @@
     // "@typescript-eslint/ban-types": "off",
     // "no-console": 0
     "require-jsdoc": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/ban-types": "off",
     "arrow-body-style": "off",
