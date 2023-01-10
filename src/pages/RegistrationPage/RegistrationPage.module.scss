@@ -1,41 +1,40 @@
+@import"../../static/styles/colors";
 .page {
-  background-color: var(--background-color);
+  background-color: $dark;
   height: 100vh;
   display: flex;
   justify-content: center;
 
   .form {
-    height: 450px;
+    height: 560px;
     width: 340px;
     display: flex;
     flex-direction: column;
     margin: auto;
-    background-color: var(--section-color);
+    background-color: $light;
     border-radius: 12px;
     align-items: center;
 
-    h2 {
+    h1 {
       margin: 0;
       padding-top: 50px;
       padding-bottom: 40px;
-      color: var(--main-text-color);
-      font-family: "Roboto";
+      color: $white;
       font-weight: 500;
       font-size: 20px;
       line-height: 20px;
     }
 
     .inputs {
-      padding-bottom: 132px;
+      padding-bottom: 110px;
     }
 
     .link {
       padding-top: 14px;
-      font-family: "Roboto";
       font-weight: 500;
       font-size: 11px;
       line-height: 11px;
-      color: var(--accent-color);
+      color: $blue;
       text-decoration: none;
 
       &:hover {
