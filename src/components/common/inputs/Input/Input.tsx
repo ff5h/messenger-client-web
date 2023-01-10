@@ -13,7 +13,7 @@ export const Input: React.FC<InputProps> = ({ label, isError = false, helperText
   return (
     <>
       <div className={styles.label}>{label}</div>
-      <input className={(styles.input, className)} {...props} />
+      <input className={`${styles.input} ${className}`} {...props} />
       {isError && helperText && <div className={styles.helperText}>{helperText}</div>}
     </>
   );
