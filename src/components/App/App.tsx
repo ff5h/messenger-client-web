@@ -1,14 +1,10 @@
-import React from "react";
-import { ErrorPage } from "../../pages/ErrorPage";
-import { LoginPage } from "../../pages/LoginPage";
-import { RegistrationPage } from "../../pages/RegistrationPage";
+import React, { FC } from 'react';
+import { RegistrationPage } from '~/pages/RegistrationPage';
 
-const App: React.FC = () => {
+export const App: FC = () => {
   return (
-    <div className="App">
+    <div className='App'>
       <RegistrationPage />
     </div>
   );
 };
-
-export { App };

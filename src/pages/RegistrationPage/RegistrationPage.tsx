@@ -1,45 +1,41 @@
-import React from "react";
-import { Button, Input } from "../../components";
-import styles from "./RegistrationPage.module.scss";
+import React from 'react';
+import { Button, Input } from '~/components';
+import { useActions } from '~/hooks/useActions';
+// import { useTypedSelector } from '~/hooks/useTypedSelector';
+import styles from './RegistrationPage.module.scss';
 
 export const RegistrationPage = () => {
-  const [formValues, setFormValues] = React.useState({ login: "", password: "" });
+  const [email, setEmail] = React.useState('');
+  const [login, setlogin] = React.useState('');
+  const [password, setpassword] = React.useState('');
+  // const { tokens, loading, error } = useTypedSelector((state) => state.auth);
+  const { registration } = useActions();
+
   return (
     <div className={styles.page}>
       <div className={styles.form}>
         <h1>Sign up</h1>
         <div className={styles.inputs}>
           <Input
-            value={formValues.login}
-            label="Email"
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-              setFormValues({ ...formValues, login: event.target.value })
-            }
+            value={email}
+            label='Email'
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
           />
           <Input
-            value={formValues.login}
-            label="Login"
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-              setFormValues({ ...formValues, login: event.target.value })
-            }
+            value={login}
+            label='Login'
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setlogin(event.target.value)}
           />
           <Input
-            value={formValues.login}
-            label="Name"
+            value={password}
+            label='Password'
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-              setFormValues({ ...formValues, login: event.target.value })
-            }
-          />
-          <Input
-            value={formValues.login}
-            label="Last name"
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-              setFormValues({ ...formValues, login: event.target.value })
+              setpassword(event.target.value)
             }
           />
         </div>
-        <Button>Next</Button>
-        <a className={styles.link} href="#">
+        <Button onClick={() => registration(email, login, password)}>Next</Button>
+        <a className={styles.link} href='#'>
           Sign in
         </a>
       </div>

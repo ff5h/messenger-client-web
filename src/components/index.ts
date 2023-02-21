@@ -1,2 +1,3 @@
-export { Button } from "./common";
-export { Input } from "./common";
+export { App } from './App';
+export { Button } from './Button';
+export { Input } from './Input';
